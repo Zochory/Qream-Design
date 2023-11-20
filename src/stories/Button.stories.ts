@@ -1,24 +1,24 @@
-import type { Meta, StoryObj } from "@storybook/vue3";
-import Button from "../../Button.vue";
+import Button from '../Button.vue';
+import Button from '@/components/Button.vue';
+
 
 const meta: Meta<typeof Button> = {
-  title: "/Button",
-  component: Button,
-  tags: ["autodocs"],
+    title: "/Button",
+    component: Button,
+    tags: ["autodocs"],
 };
 
 export default meta;
-type Story = StoryObj<typeof Button>;
 
 export const ButtonStory: Story = {
-  render: (args) => ({
-    components: { Button },
-    setup() {
-      return { args };
+    render: (args: any) => ({
+        components: { Button },
+        setup() {
+            return { args };
+        },
+        template: '<Button v-bind="args" />',
+    }),
+    args: {
+        label: "Button",
     },
-    template: '<Button v-bind="args" />',
-  }),
-  args: {
-    label: "Button",
-  },
 };

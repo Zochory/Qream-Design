@@ -1,20 +1,13 @@
 <template>
-  <button
-    :class="$style.button"
-    :autoFocus="true"
-    :disabled="true"
-    id=".btn"
-    :muted="false"
-    preload="auto"
-  >
+  <div :class="$style.sizemediumTypeprimarySta">
     <div :class="$style.text">{{label}}</div>
-  </button>
+  </div>
 </template>
 <script lang="ts">
   import { defineComponent } from "vue";
 
   export default defineComponent({
-    name: "Button",
+    name: "SizeMediumTypePrimarySta",
     props: {
       label: { type: String, default: "Button" },
     },
@@ -23,31 +16,23 @@
 <style module>
   .text {
     position: relative;
-    font-size: var(--font-size-smi);
     letter-spacing: -0.4px;
     line-height: 18px;
     font-weight: 500;
-    font-family: var(--font-inter-variable);
-    color: var(--background-surface-white-black);
-    text-align: center;
   }
-  .button {
-    border: none;
-    padding: var(--spacing-4) var(--radius-radius-s);
-    background-color: var(--color-primarycolor);
+  .sizemediumTypeprimarySta {
     border-radius: var(--radius-radius-round);
+    background-color: var(--color-primarycolor);
     height: 28px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    padding: var(--spacing-4) var(--radius-radius-s);
     box-sizing: border-box;
-  }
-  .button:hover {
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.2),
-        rgba(255, 255, 255, 0.2)
-      ),
-      #007aff;
+    text-align: center;
+    font-size: var(--font-size-smi);
+    color: var(--background-surface-white-black);
+    font-family: var(--font-inter-variable);
   }
 </style>
